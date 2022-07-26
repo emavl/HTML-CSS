@@ -1,0 +1,207 @@
+<!DOCTYPE html> 
+<html lang="en"><!-- HTML es la etiqueta raiz - todo documento va a contenenido dentro de ella  -->
+<head> <!--Dentro de esta etiqueta podemos agregar caracteristicas -->
+    <style>
+        table,th,td{
+            border: 1px solid rgb(192, 26, 26);  
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera web</title><!--Dependiendo el titulo que coloquemos ayuda al usuario en su busqueda, siempre con sun sentido-->
+    <link href="./assets/css/estilos.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head> 
+<body>
+    
+    <h1 id="principal"> Itroduccion a HTML:</h1>
+    <br>
+    
+   
+<nav class=" navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        clases
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./Html/yoga.html">yoga</a></li>
+                        <li><a class="dropdown-item" href="#">mind fullness</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">stretching</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!--    Diferentes tipos de T I T U L O S -->
+
+<p> La Etiqueta <span style="color:chocolate">DOCTYPE:</span> indica que estamos escribiendo en un documento del tipo
+    html5, si llega a ser eliminada, nuestro buscador se coloca en modo de los años 90 e interpretarlo de forma antigua,
+    por ende surgiran errores antiguos </p>
+<br>
+<br>
+<p>Aca utilizaremos los encabezados: </p>
+
+<hr>
+<h2> h1-Mi Primer heading/o titulo cabezara:</h>
+<h2>h2 - Mi Segundo heading/o subtitulo cabezara:</h2>
+<h3>h3 - Mi Tercero heading/o sub-sub titulo cabezara:</h3>
+<h4>h4 - No se utilizan solo para agrandar los textos</h4>
+<h5>h5 - No deben de ser utilizan para indicar los estilos de texto ya que las estiquetas de heading son utilizadas por
+    los motores de busqueda </h5>
+<h6>h6 - Es importante entender que son utilizadas como motor de busuqueda </h6>
+<hr>
+<h6>Etiqueta parrafo < p > </h6>
+<p>Utilizaremos la etiqueta "p" para colocar el parrafo/texto, en el caso que querramos separar con una linea utilizamos
+    la etq. hr </p>
+
+<p>HR para la linea </p>
+<p>Con la etiqueta (Span) hacemos una seleccion de texto a la cual le podemos dar un <span style="color:rgb(255, 128, 0)"> <br> Con la etiqueta (Span) hacemos una seleccion de texto a la cual le podemos dar un color y estilo sumado al " style " </span> </p>
+<p>con br hacemos saltos de linea <br> como este </p>
+<hr>
+<p>A continuacion colocaremos un link con la etiqueta a de anchor/ ancla, agregandole <br> targuet "_blank" para que abra en una nueva pestaña</p>
+
+<hr> <!--     F o r m u l a r i o     -->
+
+  <h6> Aqui colocaremos el Formulario</h6> el cual va contener la etiqueta "form" para poder recomplilar informacion del usuario. Con <span style="color:rgb(55, 199, 199)">" input "</span>  y <span style="color:rgb(78, 215, 215)">"Label"</span> le vamos danto sentido a nuestro formulario 
+  <br>
+  <br>En Label: tenemos For="Aqui colocaremos el identificador" en nuestro ejemplo es el nombre 
+  con id="nombre" entramos en el foco del recuadro haciendo click.
+  <br><br>
+<form action="/formulario" method="POST"> <!-- para enviar el formulario agregaremos el atributo action-->
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="palabra a gusto del Us.">   para que aparezca dentro del formulario utilizamos <span style="color:rgb(45, 190, 71)"> placeholder </span>
+</form>
+<form>
+    <!-- colocamos recuadro con Label -->
+    <label for="Apellido">Apellido</label>
+    <!-- le damos sentido con type id y muy importante la propiedad de "name"-->
+    <input type="texto" id="Apellido" name="Apellido" placeholder="placeholder"> con type podemos darles diferentes campos al recuadro en este caso " texto" pero podria ser email, password etc... Se pueden agregar tantos campos como nosotros querramos dentro de una etiqueta de form colocamos area de texto con "textarea" 
+    <br>
+    <label for="Comentario">Comentario</label>
+    <br>
+     <textarea name="comentario" id="comentario" placeholder="ingrese su comentario" cols="30" rows="10"> </textarea> <!--aqui agregamos el valor por defecto antes del cierre del texarea -->
+     <br>
+
+     <!-- agregamos el boton submit pero sin personaliar-->
+     <input type="submit">
+     <!-- para algo mas personalizado utilizaremos --> <br>
+     <button type="button" >Tipo boton</button>
+     <button type="reset ">Tipo reset</button>
+     <button type="submi">Tipo submit</button>
+
+     
+     <br> para valores por defecto dentro de los campos ej: el recuadro <br> <!-- Agregamos un valor por defecto -->
+     <br><label for="Emanuel">Nombre</label>
+     <input value="valor por defecto" type="text" name="nombre="Emanuel">
+</form>
+<hr>
+<!-- Colocamos una URL para clickear -->
+<br>
+<a target="_blank" href="www.google.com">Ir a Google</a>
+<br>
+<br>
+
+<!-- Agregamos imagen con una URL y desde una carpeta -->
+
+  Aca colocaremos una imagen con la etiqueta "img" colocandole una URL desde internet  
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.k8BxQA7_sk9eRArkWGbCDAHaE-%26pid%3DApi&f=1" width="500" height="500">
+<br>
+Agregamos otra imagen pero desde carpeta 
+<img src="./assets/img/imagen1.jpg" width="300" height="500"> <!--Colocamos alto y ancho-->
+<br>
+<br>
+
+
+<!-- Agregamos imagen con una card -->
+<div>
+    <img src="./assets/img/imagen1.jpg" />
+    <h4 class="soyunaclass">titulo Card</h4>
+    <p>soy la descripción de la tarjeta.</p>
+    <button>compra ahora</button>
+</div>
+<br> <!-- Para agregar listas ordenadas y desordenadas con el ° -->
+
+ <p> Listas ordenadas</p>
+  <ol>
+        <li>elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+  </ol>
+<p> Listas desordenadas</p>
+  <ul>
+        <li>elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+  </ul>
+  <p>Con valores predeterminados</p>
+  <ol>
+        <li value="30">elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+  </ol>
+  <ol>
+        <li style="list-style-type: lower-alpha">elemento 1</li>
+        <li style="list-style-type: lower-alpha">Elemento 2</li>
+        <li style="list-style-type: lower-alpha">Elemento 3</li>
+        <li style="list-style-type: lower-alpha">Elemento 4</li>
+  </ol>
+
+<!-- Agregamos tablas -->
+  <table style="width: 300px;">
+        <tr>
+            <th>producto</th>
+            <th>Precio </th>
+        </tr>
+        <tr>
+            <td>carne</td>
+            <td>$200</td>        
+        </tr>
+        <tr>
+            <td>falda</td>
+            <td>$120</td>
+        </tr>
+        <tr>
+            <td>churrazco</td>
+            <td>$500</td>
+        </tr>
+  </table>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
